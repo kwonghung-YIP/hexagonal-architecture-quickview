@@ -1,5 +1,6 @@
 package org.hung.pojo;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -17,7 +18,7 @@ public class BorrowingRecord {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long recNo;
 	
-	private String borrowUid;
+	private String borrowerUid;
 	
 	private String bookNo;
 	
@@ -26,5 +27,7 @@ public class BorrowingRecord {
 	private LocalDate dueDate;
 	
 	private LocalDate returnDate;
+	
+	private BigDecimal fining;
 	
 }
