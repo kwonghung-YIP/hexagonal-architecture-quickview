@@ -14,25 +14,25 @@ import lombok.Data;
 @Data
 @Entity
 public class BorrowingRecord {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long recNo;
-	
-	@Column(nullable = false)
-	private String borrowerUid;
-	
-	@Column(nullable = false)
-	private String bookNo;
-	
-	@Column(nullable = false)
-	private LocalDate borrowDate;
-	
-	@Column(nullable = false)
-	private LocalDate dueDate;
-	
-	private LocalDate returnDate;
-	
-	private BigDecimal overdueFines;
-	
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long recNo;
+
+    @Column(nullable = false)
+    private String borrowerUid;
+
+    @Column(nullable = false)
+    private String bookNo;
+
+    @Column(nullable = false)
+    private LocalDate borrowDate;
+
+    @Column(nullable = false)
+    private LocalDate dueDate;
+
+    private LocalDate returnDate;
+
+    private BigDecimal overdueFines;
+
 }

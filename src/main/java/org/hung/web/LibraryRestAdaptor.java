@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/library")
 public class LibraryRestAdaptor {
 
-	@Autowired
-	private LibraryUseCase useCase;
-	
-	@GetMapping("/borrow")
-	public BorrowingRecord borrowBook(@RequestParam String uid, @RequestParam String bookNo) throws RecordNotFoundException {
-		return useCase.borrowBook(uid, bookNo);
-	}
-	
-	@GetMapping("/return")
-	public BorrowingRecord returnBook(@RequestParam long recNo) throws RecordNotFoundException {
-		return useCase.returnBook(recNo);
-	}
-	
+    @Autowired
+    private LibraryUseCase useCase;
+
+    @GetMapping("/borrow")
+    public BorrowingRecord borrowBook(@RequestParam String uid, @RequestParam String bookNo) throws RecordNotFoundException {
+        return useCase.borrowBook(uid, bookNo);
+    }
+
+    @GetMapping("/return")
+    public BorrowingRecord returnBook(@RequestParam long recNo) throws RecordNotFoundException {
+        return useCase.returnBook(recNo);
+    }
+
 }

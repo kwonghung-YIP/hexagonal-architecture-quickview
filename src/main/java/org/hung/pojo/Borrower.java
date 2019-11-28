@@ -8,12 +8,12 @@ import lombok.Data;
 @Data
 @Entity
 public class Borrower {
-	
-	@Id
-	private String uid;
-	
-	private String firstName;
-	
-	private String lastName;
+
+    @Id
+    private String uid;
+
+    private String firstName;
+
+    private String lastName;
 
 }
